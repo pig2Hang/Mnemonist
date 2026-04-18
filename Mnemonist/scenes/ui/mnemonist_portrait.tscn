@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://cx5rdp7ge8w72"]
+
+[ext_resource type="Texture2D" uid="uid://crlfc8v5iibxc" path="res://Mnemonist/images/charui/mnemonist_portrait.jpg" id="1_xisa5"]
+
+[node name="MnemonistBg" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 2417.6
+offset_bottom = 1511.0
+texture = ExtResource("1_xisa5")

@@ -103,7 +103,6 @@
     <ItemGroup>
         <Folder Include="Mnemonist\images\potions\" />
         <Folder Include="Mnemonist\scenes\combat\creature_visuals\" />
-        <Folder Include="Mnemonist\scenes\ui\" />
     </ItemGroup>
 
     <Target Name="CheckDependencyPaths">

@@ -25,7 +25,7 @@ public class Mnemonist : PlaceholderCharacterModel
     public override string CustomVisualPath => "res://Mnemonist/scenes/combat/creature_visuals/mnemonist.tscn";
     public override string CustomMerchantAnimPath => "res://Mnemonist/scenes/merchant/mnemonist.tscn";
     public override string CustomRestSiteAnimPath => "res://Mnemonist/scenes/rest/mnemonist_rest.tscn";
-
+    public override string CustomCharacterSelectBg => "res://Mnemonist/scenes/ui/mnemonist_portrait.tscn";
 
     public override Color NameColor => Color;
     public override CharacterGender Gender => CharacterGender.Masculine;
