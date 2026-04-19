@@ -20,7 +20,7 @@ public class Memento() : MnemonistCard(0,
         CardPlay play)
     {
         CardSelectorPrefs prefs = new CardSelectorPrefs(SelectionScreenPrompt, 1);
-        CardModel? card = (await CardSelectCmd.FromHand(choiceContext, Owner, prefs,  c => !c.IsPersistent(), this)).FirstOrDefault<CardModel>();
+        CardModel? card = (await CardSelectCmd.FromHand(choiceContext, Owner, prefs,  c => !c.IsPersistent() && (c.Type == CardType.Attack), this)).FirstOrDefault<CardModel>();
         if (card == null)
             return;
         CardCmd.ApplyKeyword(card, MnemonistKeywords.Persistent);
@@ -28,6 +28,6 @@ public class Memento() : MnemonistCard(0,
 
     protected override void OnUpgrade()
     {
-        this.AddKeyword(CardKeyword.Retain);
+        this.RemoveKeyword(CardKeyword.Exhaust);
     }
 }
