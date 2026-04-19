@@ -1,11 +1,13 @@
 # The Mnemonist
 
-A mostly complete Slay The Spire 2 Character Mod.
+A Slay The Spire 2 Character Mod.
 
 Play as the Mnemonist: an amnesiac psychic who uses his few remaining memories as sword and shield both. When the Mnemonist takes unblocked damage, he exhausts cards from his discard pile. Use "Memory" to create Engrams that will absorb the blows, or selectively exhaust the useless cards in your deck to great effect.
 
+79 draftable cards. 9 relics. 3 potions.
+
 Thanks to the Megacrit team for the game, and Alchyr for Baselib and the Mod Template.
 
-Fast Mode is highly recommended.
+Fast Mode is highly recommended. Multiplayer is untested.
 
-Requires BaseLib 0.3.0. Works in the Beta Branch of Slay the Spire 2.
+Requires BaseLib 0.3.0.
