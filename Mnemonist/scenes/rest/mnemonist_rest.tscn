@@ -1,54 +1,1903 @@
-[gd_scene load_steps=3 format=3 uid="uid://jvm6agse2ls2"]
+[gd_scene load_steps=10 format=3 uid="uid://jvm6agse2ls3"]
 
-[ext_resource type="Texture2D" uid="uid://bftoobrcvum04" path="res://Mnemonist/scenes/rest/menmonist_sitting.png" id="1_wo0m6"]
+[ext_resource type="Texture2D" uid="uid://ckwiayb0rnqi7" path="res://Mnemonist/scenes/combat/creature_visuals/Mnemonist_Sprite.png" id="2_rqdlr"]
 [ext_resource type="PackedScene" uid="uid://bgy88bk44xxvk" path="res://Mnemonist/scenes/rest/selection_reticle.tscn" id="3_evojs"]
 
-[node name="MnemonistRest" type="Node2D"]
+[sub_resource type="Animation" id="Animation_sdktp"]
+resource_name = "RESET"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Visuals/Body/Front Collar/Front Sleeve:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Visuals/Body/Back Sleeve:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Visuals/Body/Front Collar/Front Sleeve/Front Tentacle A:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(144.89981, 289.79953)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Visuals/Body/Front Collar/Front Sleeve/Front Tentacle A:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Visuals/Body/Front Collar/Front Sleeve/Front Tentacle A/Front Tentacle B:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Visuals/Body/Front Collar/Front Sleeve/Front Tentacle A/Front Tentacle C:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Visuals/Body/Front Collar/Front Sleeve/Front Tentacle A/Front Tentacle C:scale")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Visuals/Body/Back Sleeve/Back Tentacle B/Back Tentacle A:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Visuals/Body/Back Sleeve/Back Tentacle B/Back Tentacle C:rotation")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Visuals/Body/Front Collar/Back Collar/Neck:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(778.098, 937.098)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Visuals/Body/Front Collar/Back Collar/Neck/Brain:rotation")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Visuals/Body/Front Collar/Back Collar/Neck/Brain/Front Stalk:rotation")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Visuals/Body/Front Collar/Back Collar/Neck/Brain/Back Stalk:rotation")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Visuals/Body/Front Collar/Back Collar/Neck/Brain/Front Stalk/Front Eye:scale")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Visuals/Body/Front Collar/Back Collar/Neck/Brain/Mandible Mid/Mandible Front:rotation")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Visuals/Body/Front Collar/Back Collar/Neck/Brain/Mandible Mid/Mandible Back:rotation")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("Visuals/Body/Front Collar/Front Sleeve/Front Tentacle A:scale")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("Visuals/Body/Front Collar/Back Collar/Neck:rotation")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("Visuals/Body/Front Collar/Back Collar/Neck/Brain/Mandible Mid:position")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(100.799866, -37.80005)]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("Visuals/Body/Front Collar/Back Collar/Neck/Brain/Front Stalk:scale")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("Visuals/Body/Front Collar/Back Collar/Neck/Brain/Front Stalk/Front Eye:color")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("Visuals/Body:position")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -500)]
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("Visuals/Body/Front Collar/Back Collar/Neck/Brain/Back Stalk/Back Eye:color")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/23/type = "value"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("Visuals/Body/Front Collar/Back Collar/Neck/Brain:color")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/24/type = "value"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("Visuals/Body:color")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0.78431374, 0.78431374, 1)]
+}
+tracks/25/type = "value"
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/path = NodePath("Visuals/Body/Front Collar/Back Collar/Neck/Brain/Mandible Mid/Mandible Front:color")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = {
+"times": PackedFloat32Array(0.033333335),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/26/type = "value"
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/path = NodePath("Visuals/Body/Front Collar/Back Collar/Neck/Brain/Mandible Mid/Mandible Back:color")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/27/type = "value"
+tracks/27/imported = false
+tracks/27/enabled = true
+tracks/27/path = NodePath("Visuals/Body/Front Collar/Back Collar/Neck:color")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/28/type = "value"
+tracks/28/imported = false
+tracks/28/enabled = true
+tracks/28/path = NodePath("Visuals/Body/Front Collar/Back Collar/Neck/Brain/Back Stalk:scale")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/29/type = "value"
+tracks/29/imported = false
+tracks/29/enabled = true
+tracks/29/path = NodePath("Visuals/Body/Back Sleeve/Back Tentacle B:scale")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/30/type = "value"
+tracks/30/imported = false
+tracks/30/enabled = true
+tracks/30/path = NodePath("Visuals/Body/Front Collar/Back Collar/Neck/Brain/Mandible Mid:color")
+tracks/30/interp = 1
+tracks/30/loop_wrap = true
+tracks/30/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/31/type = "value"
+tracks/31/imported = false
+tracks/31/enabled = true
+tracks/31/path = NodePath("Visuals/Body/Front Collar/Back Collar/Neck/Brain/Back Stalk/Back Eye:scale")
+tracks/31/interp = 1
+tracks/31/loop_wrap = true
+tracks/31/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/32/type = "value"
+tracks/32/imported = false
+tracks/32/enabled = true
+tracks/32/path = NodePath("Visuals/Body/Back Sleeve/Back Tentacle B:rotation")
+tracks/32/interp = 1
+tracks/32/loop_wrap = true
+tracks/32/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/33/type = "value"
+tracks/33/imported = false
+tracks/33/enabled = true
+tracks/33/path = NodePath("Visuals/Body/Front Collar/Back Collar/Neck/Brain/Front Stalk:color")
+tracks/33/interp = 1
+tracks/33/loop_wrap = true
+tracks/33/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/34/type = "value"
+tracks/34/imported = false
+tracks/34/enabled = true
+tracks/34/path = NodePath("Visuals/Body/Front Collar/Back Collar/Neck/Necklace:color")
+tracks/34/interp = 1
+tracks/34/loop_wrap = true
+tracks/34/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/35/type = "value"
+tracks/35/imported = false
+tracks/35/enabled = true
+tracks/35/path = NodePath("Visuals/Body/Front Collar/Front Sleeve:color")
+tracks/35/interp = 1
+tracks/35/loop_wrap = true
+tracks/35/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/36/type = "value"
+tracks/36/imported = false
+tracks/36/enabled = true
+tracks/36/path = NodePath("Visuals/Body/Front Collar:color")
+tracks/36/interp = 1
+tracks/36/loop_wrap = true
+tracks/36/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/37/type = "value"
+tracks/37/imported = false
+tracks/37/enabled = true
+tracks/37/path = NodePath("Visuals/Body/Front Collar/Back Collar:color")
+tracks/37/interp = 1
+tracks/37/loop_wrap = true
+tracks/37/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/38/type = "value"
+tracks/38/imported = false
+tracks/38/enabled = true
+tracks/38/path = NodePath("Visuals/Body/Back Sleeve:color")
+tracks/38/interp = 1
+tracks/38/loop_wrap = true
+tracks/38/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/39/type = "value"
+tracks/39/imported = false
+tracks/39/enabled = true
+tracks/39/path = NodePath("Visuals/Body/Back Sleeve/Back Sleeve Back:color")
+tracks/39/interp = 1
+tracks/39/loop_wrap = true
+tracks/39/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
 
-[node name="TextureRect" type="TextureRect" parent="."]
-offset_left = -207.00002
-offset_top = -333.0
-offset_right = 42.999985
-offset_bottom = -133.0
-scale = Vector2(1.6675045, 2.1127877)
-texture = ExtResource("1_wo0m6")
+[sub_resource type="Animation" id="Animation_pxeq6"]
+resource_name = "attack"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Visuals/Body/Front Collar/Front Sleeve:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, -0.5759586531581288, -0.5759586531581288]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Visuals/Body/Front Collar/Front Sleeve/Front Tentacle A:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 1.2688543661998777, 1.2688543661998777]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Visuals/Body/Front Collar/Front Sleeve/Front Tentacle A:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.16666667, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.2, 1.2), Vector2(1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Visuals/Body/Back Sleeve/Back Tentacle B:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.16666667, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.2, 1.2), Vector2(1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Visuals/Body/Back Sleeve/Back Tentacle B/Back Tentacle A:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.016666666, 0.16666667, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.4625122517784973, 0.2617993877991494]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Visuals/Body/Back Sleeve/Back Tentacle B/Back Tentacle C:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.48333335),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, -0.17453292519943295, -0.08726646259971647]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Visuals/Body/Front Collar/Back Collar/Neck:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.5759586531581288, 0.0]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Visuals/Body/Front Collar/Back Collar/Neck/Brain:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, -0.5759586531581288, 0.0]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Visuals/Body/Front Collar/Back Collar/Neck/Brain/Front Stalk:rotation")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.2617993877991494, 0.0]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Visuals/Body/Front Collar/Back Collar/Neck/Brain/Back Stalk:rotation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.17453292519943295, 0.0]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Visuals/Body/Front Collar/Back Collar/Neck/Brain/Front Stalk/Front Eye:scale")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.2, 1.2), Vector2(1, 1)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Visuals/Body/Front Collar/Back Collar/Neck/Brain/Back Stalk/Back Eye:scale")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.5, 1.5), Vector2(1, 1)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Visuals/Body/Front Collar/Back Collar/Neck/Brain/Mandible Mid:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0, 0.26666668, 0.33333334, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(100.799866, -37.80005), Vector2(100.8, -25), Vector2(100.799866, -37.80005), Vector2(100.8, -45), Vector2(100.799866, -37.80005)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Visuals/Body/Front Collar/Back Collar/Neck/Brain/Mandible Mid/Mandible Front:rotation")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0, 0.26666668, 0.33333334, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.34557519189487745, 0.0, -0.34557519189487745, 0.0]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Visuals/Body/Front Collar/Back Collar/Neck/Brain/Mandible Mid/Mandible Back:rotation")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0, 0.26666668, 0.33333334, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.34557519189487745, 0.0, -0.34557519189487745, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_f8mlf"]
+resource_name = "cast"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Visuals/Body/Front Collar/Front Sleeve:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, -1.1519173063162575, -1.1519173063162575]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Visuals/Body/Front Collar/Front Sleeve/Front Tentacle A:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 1.2688543661998777, 1.2688543661998777]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Visuals/Body/Back Sleeve/Back Tentacle B/Back Tentacle A:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.016666666, 0.16666667, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.4625122517784973, 0.2617993877991494]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Visuals/Body/Back Sleeve/Back Tentacle B/Back Tentacle C:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, -0.17453292519943295, -0.08726646259971647]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Visuals/Body/Front Collar/Back Collar/Neck:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, -0.13962634015954636, -0.13962634015954636]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Visuals/Body/Front Collar/Back Collar/Neck/Brain:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.08726646259971647, 0.08726646259971647]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Visuals/Body/Front Collar/Back Collar/Neck/Brain/Front Stalk:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, -0.08726646259971647, -0.08726646259971647]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Visuals/Body/Front Collar/Back Collar/Neck/Brain/Back Stalk:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, -0.08726646259971647, -0.08726646259971647]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Visuals/Body/Front Collar/Back Collar/Neck/Brain/Front Stalk/Front Eye:scale")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1, 0.5), Vector2(1, 0.5)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Visuals/Body/Front Collar/Back Collar/Neck/Brain/Back Stalk/Back Eye:scale")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1, 0.5), Vector2(1, 0.5)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Visuals/Body/Front Collar/Back Collar/Neck/Brain/Mandible Mid:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 0.26666668, 0.33333334, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(100.799866, -37.80005), Vector2(100.8, -25), Vector2(100.799866, -37.80005), Vector2(100.8, -45), Vector2(100.799866, -37.80005)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Visuals/Body/Front Collar/Back Collar/Neck/Brain/Mandible Mid/Mandible Front:rotation")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 0.26666668, 0.33333334, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.34557519189487745, 0.0, -0.34557519189487745, 0.0]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Visuals/Body/Front Collar/Back Collar/Neck/Brain/Mandible Mid/Mandible Back:rotation")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0, 0.26666668, 0.33333334, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.34557519189487745, 0.0, -0.34557519189487745, 0.0]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Visuals/Body/Back Sleeve:rotation")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, -0.5759586531581288, -0.5759586531581288]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Visuals/Body/Front Collar/Back Collar/Neck/Brain/Front Stalk:scale")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.9, 0.9), Vector2(0.9000799, 0.9000799)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Visuals/Body/Front Collar/Back Collar/Neck/Brain/Back Stalk:scale")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.9, 0.9), Vector2(0.9000799, 0.9000799)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("Visuals/Body/Front Collar/Back Collar/Neck/Brain/Front Stalk/Front Eye:color")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0, 0.06666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 0.22745098, 1, 1)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("Visuals/Body/Front Collar/Back Collar/Neck/Brain/Back Stalk/Back Eye:color")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0, 0.06666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 0.22745098, 1, 1)]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("Visuals/Body/Front Collar/Front Sleeve/Front Tentacle A:position")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(144.89981, 289.79953), Vector2(200, 289.8), Vector2(200, 289.8)]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("Visuals/Body/Front Collar/Front Sleeve/Front Tentacle A:scale")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.3, 1.3), Vector2(1.3, 1.3)]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("Visuals/Body/Front Collar/Front Sleeve/Front Tentacle A/Front Tentacle B:rotation")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0, 0.23333333, 0.26666668, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, -0.17453292519943295, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_r1l85"]
+resource_name = "dead"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Visuals/Body/Front Collar/Back Collar/Neck/Brain/Front Stalk:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.1, 0.1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Visuals/Body/Front Collar/Back Collar/Neck/Brain/Back Stalk:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.1, 0.1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Visuals/Body/Front Collar/Front Sleeve/Front Tentacle A:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.1, 0.1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Visuals/Body/Back Sleeve/Back Tentacle B:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.1, 0.1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Visuals/Body/Front Collar/Back Collar/Neck/Brain/Front Stalk/Front Eye:color")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.099999994),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Visuals/Body/Front Collar/Back Collar/Neck/Brain/Back Stalk/Back Eye:color")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.099999994),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Visuals/Body/Front Collar/Front Sleeve:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.5759586531581288]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Visuals/Body/Back Sleeve:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.497492498211135]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Visuals/Body/Front Collar/Back Collar/Neck/Brain/Mandible Mid/Mandible Front:color")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0.5689727, 0.56897277, 0.5689727, 1)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Visuals/Body/Front Collar/Back Collar/Neck/Brain/Mandible Mid/Mandible Back:color")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 0.99),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0.5689727, 0.56897277, 0.5689727, 1)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Visuals/Body/Front Collar/Back Collar/Neck:color")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 0.99),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0.5689727, 0.56897277, 0.5689727, 1)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Visuals/Body/Front Collar/Back Collar/Neck/Brain/Mandible Mid:color")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 0.99),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0.5689727, 0.56897277, 0.5689727, 1)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Visuals/Body/Front Collar/Back Collar/Neck/Brain:color")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0.5689727, 0.56897277, 0.5689727, 1)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Visuals/Body/Front Collar/Back Collar/Neck/Brain/Front Stalk:color")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0, 0.8, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Visuals/Body/Front Collar/Back Collar/Neck/Necklace:color")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0.30323282, 0.30323282, 0.30323282, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_o8flf"]
+resource_name = "hit"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Visuals/Body/Front Collar/Front Sleeve:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, -1.1519173063162575, -0.5759586531581288]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Visuals/Body/Front Collar/Front Sleeve/Front Tentacle A:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 1.2688543661998777, 0.6283185307179586]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Visuals/Body/Back Sleeve/Back Tentacle B/Back Tentacle A:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.016666666, 0.16666667, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.4625122517784973, 0.13962634015954636]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Visuals/Body/Back Sleeve/Back Tentacle B/Back Tentacle C:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, -0.17453292519943295, -0.04363323129985824]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Visuals/Body/Front Collar/Back Collar/Neck:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, -0.13962634015954636, -0.06981317007977318]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Visuals/Body/Front Collar/Back Collar/Neck/Brain:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.08726646259971647, 0.04363323129985824]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Visuals/Body/Front Collar/Back Collar/Neck/Brain/Front Stalk:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, -0.2617993877991494, -0.03490658503988659]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Visuals/Body/Front Collar/Back Collar/Neck/Brain/Back Stalk:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, -0.3490658503988659, -0.03490658503988659]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Visuals/Body/Front Collar/Back Collar/Neck/Brain/Front Stalk/Front Eye:scale")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.2, 1.2), Vector2(1, 1)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Visuals/Body/Front Collar/Back Collar/Neck/Brain/Back Stalk/Back Eye:scale")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.2, 1.2), Vector2(1, 1)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Visuals/Body/Front Collar/Back Collar/Neck/Brain/Mandible Mid:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 0.26666668, 0.33333334, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(100.799866, -37.80005), Vector2(100.8, -25), Vector2(100.799866, -37.80005), Vector2(100.8, -45), Vector2(100.799866, -37.80005)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Visuals/Body/Front Collar/Back Collar/Neck/Brain/Mandible Mid/Mandible Front:rotation")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 0.26666668, 0.33333334, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.34557519189487745, 0.0, -0.34557519189487745, 0.0]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Visuals/Body/Front Collar/Back Collar/Neck/Brain/Mandible Mid/Mandible Back:rotation")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0, 0.26666668, 0.33333334, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.34557519189487745, 0.0, -0.34557519189487745, 0.0]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Visuals/Body/Back Sleeve:rotation")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, -0.5759586531581288, -0.2617993877991494]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Visuals/Body/Front Collar/Back Collar/Neck/Brain/Front Stalk:scale")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.9, 0.9), Vector2(0.9000799, 0.9000799)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Visuals/Body/Front Collar/Back Collar/Neck/Brain/Back Stalk:scale")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.9, 0.9), Vector2(0.9000799, 0.9000799)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("Visuals/Body/Front Collar/Back Collar/Neck/Brain/Front Stalk/Front Eye:color")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0, 0.06666667, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 0.13333334, 0.14901961, 1), Color(1, 1, 1, 1)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("Visuals/Body/Front Collar/Front Sleeve/Front Tentacle A:position")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(144.89981, 289.79953), Vector2(200, 289.8), Vector2(160, 289.8)]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("Visuals/Body/Front Collar/Front Sleeve/Front Tentacle A:scale")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.3, 1.3), Vector2(1.1, 1.1)]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("Visuals/Body/Front Collar/Front Sleeve/Front Tentacle A/Front Tentacle B:rotation")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0, 0.23333333, 0.26666668, 0.3, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, -0.17453292519943295, 0.0, 0.0]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("Visuals/Body:position")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0, 0.06666667, 0.26666668, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-14, -401), Vector2(-44, -401), Vector2(-44, -401), Vector2(-14, -401)]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("Visuals/Body/Front Collar/Back Collar/Neck/Brain:color")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(0, 0.16666667, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 0.78431374, 0.78431374, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1)]
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("Visuals/Body:color")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(0, 0.16666667, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 0.78431374, 0.78431374, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1)]
+}
+tracks/23/type = "value"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("Visuals/Body/Front Collar/Back Collar/Neck/Brain/Back Stalk/Back Eye:color")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"times": PackedFloat32Array(0, 0.43333334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 0.13333334, 0.14901961, 1), Color(1, 1, 1, 1)]
+}
+tracks/24/type = "value"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("Visuals/Body/Front Collar/Front Sleeve:color")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"times": PackedFloat32Array(0, 0.16666669, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 0.78431374, 0.78431374, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1)]
+}
+tracks/25/type = "value"
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/path = NodePath("Visuals/Body/Front Collar:color")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = {
+"times": PackedFloat32Array(0, 0.16666667, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 0.78431374, 0.78431374, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1)]
+}
+tracks/26/type = "value"
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/path = NodePath("Visuals/Body/Front Collar/Back Collar:color")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/keys = {
+"times": PackedFloat32Array(0, 0.16666667, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 0.78431374, 0.78431374, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1)]
+}
+tracks/27/type = "value"
+tracks/27/imported = false
+tracks/27/enabled = true
+tracks/27/path = NodePath("Visuals/Body/Front Collar/Back Collar/Neck:color")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/keys = {
+"times": PackedFloat32Array(0, 0.16666667, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 0.78431374, 0.78431374, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1)]
+}
+tracks/28/type = "value"
+tracks/28/imported = false
+tracks/28/enabled = true
+tracks/28/path = NodePath("Visuals/Body/Back Sleeve:color")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/keys = {
+"times": PackedFloat32Array(0, 0.16666667, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 0.78431374, 0.78431374, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1)]
+}
+tracks/29/type = "value"
+tracks/29/imported = false
+tracks/29/enabled = true
+tracks/29/path = NodePath("Visuals/Body/Back Sleeve/Back Sleeve Back:color")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/keys = {
+"times": PackedFloat32Array(0, 0.16666667, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 0.78431374, 0.78431374, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_mar72"]
+resource_name = "idle_loop"
+length = 4.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Visuals/Body/Front Collar/Front Sleeve:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -0.13962634015954636, 0.0, 0.13962634015954636, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Visuals/Body/Back Sleeve:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 2.0333333, 3, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.06981317007977318, 0.0, -0.06981317007977318, 0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Visuals/Body/Front Collar/Front Sleeve/Front Tentacle A:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1, 2.0333333, 3, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(144.89981, 289.79953), Vector2(111.11509, 301.47437), Vector2(144.89981, 289.79953), Vector2(164.9, 310.8), Vector2(144.89981, 289.79953)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Visuals/Body/Front Collar/Front Sleeve/Front Tentacle A:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1, 2.0333333, 3, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.3490658503988659, 0.0, -0.3490658503988659, 0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Visuals/Body/Front Collar/Front Sleeve/Front Tentacle A/Front Tentacle B:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.08726646259971647, 0.0, -0.08726646259971647, 0.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Visuals/Body/Front Collar/Front Sleeve/Front Tentacle A/Front Tentacle C:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -0.13962634015954636, 0.0, 0.13962634015954636, 0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Visuals/Body/Front Collar/Front Sleeve/Front Tentacle A/Front Tentacle C:scale")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 2, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.1, 1.1), Vector2(1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Visuals/Body/Back Sleeve/Back Tentacle B/Back Tentacle A:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 2, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.3490658503988659, 0.0]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Visuals/Body/Back Sleeve/Back Tentacle B/Back Tentacle C:rotation")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 1, 3, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.3490658503988659, 0.0, 0.0]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Visuals/Body/Front Collar/Back Collar/Neck:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 1, 1.9916667, 3, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(778.098, 937.098), Vector2(770, 945), Vector2(778.098, 937.098), Vector2(770, 950), Vector2(778.098, 937.098)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Visuals/Body/Front Collar/Back Collar/Neck/Brain:rotation")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -0.10471975511965978, 0.0, 0.10471975511965978, 0.0]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Visuals/Body/Front Collar/Back Collar/Neck/Brain/Front Stalk:rotation")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.06981317007977318, 0.0, -0.06981317007977318, 0.0]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Visuals/Body/Front Collar/Back Collar/Neck/Brain/Back Stalk:rotation")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3.01, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.13962634015954636, 0.0, -0.05235987755982989, 0.0]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Visuals/Body/Front Collar/Back Collar/Neck/Brain/Front Stalk/Front Eye:scale")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0, 2.9, 3.02, 3.15, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1, 1), Vector2(0, 1), Vector2(1, 1), Vector2(1, 1)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Visuals/Body/Front Collar/Back Collar/Neck/Brain/Back Stalk/Back Eye:scale")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0, 2.9, 3.02, 3.15, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1, 1), Vector2(0, 1), Vector2(1, 1), Vector2(1, 1)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Visuals/Body/Front Collar/Back Collar/Neck/Brain/Mandible Mid/Mandible Front:rotation")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0, 0.8333333, 1, 1.1666666, 1.3, 2.8, 3, 3.2, 4.0333333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, -0.13962634015954636, 0.13962634015954636, 0.0, 0.0, -0.11519173063162616, 0.0, 0.0]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("Visuals/Body/Front Collar/Back Collar/Neck/Brain/Mandible Mid/Mandible Back:rotation")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(-0.008333325, 0.76666665, 1, 1.3, 2.74, 2.9733334, 3.2733333, 4.0666666),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 0.5235987755982988, 0.0, 0.0, 0.3141592653589793, 0.0, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pxeq6"]
+_data = {
+&"RESET": SubResource("Animation_sdktp"),
+&"attack": SubResource("Animation_pxeq6"),
+&"cast": SubResource("Animation_f8mlf"),
+&"dead": SubResource("Animation_r1l85"),
+&"hit": SubResource("Animation_o8flf"),
+&"idle_loop": SubResource("Animation_mar72")
+}
+
+[node name="MnemonistRest" type="Node2D"]
 
 [node name="ControlRoot" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 17.105127
-offset_top = 24.999802
-offset_right = 17.105127
-offset_bottom = 24.999802
+offset_left = -154.0
+offset_top = -8.0
+offset_right = -154.0
+offset_bottom = -8.0
 
 [node name="SelectionReticle" parent="ControlRoot" instance=ExtResource("3_evojs")]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = -181.5775
-offset_top = -335.52365
-offset_right = 146.05147
-offset_bottom = 30.262909
+offset_left = 0.0
+offset_top = -366.0
+offset_right = 327.62897
+offset_bottom = -0.21343994
 
 [node name="Hitbox" type="Control" parent="ControlRoot"]
 unique_name_in_owner = true
 anchors_preset = 0
-offset_left = -189.4722
-offset_top = -365.78653
-offset_right = 159.20926
-offset_bottom = 34.210327
+offset_left = -8.0
+offset_top = -383.0
+offset_right = 340.68146
+offset_bottom = 16.996857
 
 [node name="ThoughtBubbleRight" type="Control" parent="ControlRoot"]
 unique_name_in_owner = true
 anchors_preset = 0
-offset_left = 168.42
-offset_top = -410.523
-offset_right = 168.42
-offset_bottom = -410.523
+offset_left = 336.0
+offset_top = -290.0
+offset_right = 336.0
+offset_bottom = -290.0
 
 [node name="ThoughtBubbleLeft" type="Control" parent="ControlRoot"]
 unique_name_in_owner = true
 anchors_preset = 0
-offset_left = -169.736
-offset_top = -392.102
-offset_right = -169.736
-offset_bottom = -392.102
+offset_left = 84.0
+offset_top = -287.0
+offset_right = 84.0
+offset_bottom = -287.0
+
+[node name="Visuals" type="Node2D" parent="."]
+position = Vector2(-154, -9)
+
+[node name="Body" type="Polygon2D" parent="Visuals"]
+position = Vector2(0, -500)
+scale = Vector2(0.2, 0.2)
+color = Color(1, 0.78431374, 0.78431374, 1)
+texture = ExtResource("2_rqdlr")
+polygon = PackedVector2Array(95.00668, 2446.7031, 258.35672, 2493.893, 885.13696, 2516.883, 1044.857, 2503.5732, 1245.0519, 2464.853, 1341.8519, 2427.343, 1314.2646, 2200.8877, 1236.0828, 1907.2513, 1198.81, 1781.0795, 1155.1736, 1571.9885, 1142.4463, 1447.443, 1117.9009, 1420.9565, 1156.0828, 1391.8656, 1130.6282, 1377.3202, 1091.5372, 1336.411, 998.80994, 1311.8656, 841.5372, 1330.0474, 727.90076, 1382.7747, 675.17346, 1470.9565, 608.51697, 1740.8607, 518.6087, 1937.3839, 413.60867, 2102.384, 280.6086, 2268.805, 174.60857, 2358.805, 90.60854, 2399.805)
+uv = PackedVector2Array(95.00668, 2446.7031, 258.35672, 2493.893, 885.13696, 2516.883, 1044.857, 2503.5732, 1245.0519, 2464.853, 1341.8519, 2427.343, 1314.2646, 2200.8877, 1236.0828, 1907.2513, 1198.81, 1781.0795, 1155.1736, 1571.9885, 1142.4463, 1447.443, 1117.9009, 1420.9565, 1156.0828, 1391.8656, 1130.6282, 1377.3202, 1091.5372, 1336.411, 998.80994, 1311.8656, 841.5372, 1330.0474, 727.90076, 1382.7747, 675.17346, 1470.9565, 608.51697, 1740.8607, 518.6087, 1937.3839, 413.60867, 2102.384, 280.6086, 2268.805, 174.60857, 2358.805, 90.60854, 2399.805)
+
+[node name="Front Collar" type="Polygon2D" parent="Visuals/Body"]
+position = Vector2(540, 624)
+texture = ExtResource("2_rqdlr")
+polygon = PackedVector2Array(125, 1010.831, 153, 907.831, 226, 811.831, 315, 782.831, 398, 798.831, 449, 849.831, 490, 849.831, 475, 794.831, 460, 728.831, 379, 670.831, 275, 669.831, 179, 706.831, 97, 791.831, 44, 886.831, 39, 959.831, 63, 1016.831, 96, 1032.831, 121, 1020.831)
+uv = PackedVector2Array(125, 1010.831, 153, 907.831, 226, 811.831, 315, 782.831, 398, 798.831, 449, 849.831, 490, 849.831, 475, 794.831, 460, 728.831, 379, 670.831, 275, 669.831, 179, 706.831, 97, 791.831, 44, 886.831, 39, 959.831, 63, 1016.831, 96, 1032.831, 121, 1020.831)
+
+[node name="Front Sleeve" type="Polygon2D" parent="Visuals/Body/Front Collar"]
+position = Vector2(335.69867, 900.5977)
+offset = Vector2(-178.99866, -1415.9976)
+texture = ExtResource("2_rqdlr")
+polygon = PackedVector2Array(116.09656, 1314.6272, 63.122192, 1423.3718, 74.83502, 1593.2074, 164.14514, 1789.397, 300.30652, 1912.3813, 380.65784, 2015.2339, 448.0952, 2015.2339, 492.18884, 1792.1721, 466.25146, 1576.8914, 414.3766, 1504.2666, 292.47058, 1525.0165, 292.47058, 1400.5168, 238.00195, 1322.7045, 170.5647, 1296.7671)
+uv = PackedVector2Array(116.09656, 1314.6272, 63.122192, 1423.3718, 74.83502, 1593.2074, 164.14514, 1789.397, 300.30652, 1912.3813, 380.65784, 2015.2339, 448.0952, 2015.2339, 492.18884, 1792.1721, 466.25146, 1576.8914, 414.3766, 1504.2666, 292.47058, 1525.0165, 292.47058, 1400.5168, 238.00195, 1322.7045, 170.5647, 1296.7671)
+
+[node name="Front Tentacle A" type="Polygon2D" parent="Visuals/Body/Front Collar/Front Sleeve"]
+show_behind_parent = true
+position = Vector2(144.89981, 289.79953)
+offset = Vector2(-56.69995, -1196.998)
+texture = ExtResource("2_rqdlr")
+polygon = PackedVector2Array(144.72394, 1242.0461, 183.32294, 1247.3701, 217.9289, 1207.4402, 237.89398, 1118.2631, 269.83795, 1102.2911, 271.169, 1073.009, 231.23895, 1051.713, 184.65393, 1084.988, 179.32996, 1147.5452, 158.03394, 1196.7921, 126.089905, 1207.4402, 132.74493, 1235.3911)
+uv = PackedVector2Array(144.72394, 1242.0461, 183.32294, 1247.3701, 217.9289, 1207.4402, 237.89398, 1118.2631, 269.83795, 1102.2911, 271.169, 1073.009, 231.23895, 1051.713, 184.65393, 1084.988, 179.32996, 1147.5452, 158.03394, 1196.7921, 126.089905, 1207.4402, 132.74493, 1235.3911)
+
+[node name="Front Tentacle B" type="Polygon2D" parent="Visuals/Body/Front Collar/Front Sleeve/Front Tentacle A"]
+position = Vector2(50.399933, -94.49988)
+offset = Vector2(-323.7528, -1191.3596)
+texture = ExtResource("2_rqdlr")
+polygon = PackedVector2Array(389.3029, 1257.66, 362.6829, 1164.49, 386.8829, 1128.19, 419.5529, 1128.19, 489.73294, 1159.65, 538.13293, 1146.3401, 534.5029, 1093.1, 513.933, 1078.58, 506.67294, 1095.52, 475.21292, 1090.6799, 415.92288, 1068.9, 365.10287, 1070.11, 328.8029, 1096.73, 303.39285, 1143.92, 298.55283, 1197.16, 313.07285, 1245.56, 348.16287, 1275.81)
+uv = PackedVector2Array(389.3029, 1257.66, 362.6829, 1164.49, 386.8829, 1128.19, 419.5529, 1128.19, 489.73294, 1159.65, 538.13293, 1146.3401, 534.5029, 1093.1, 513.933, 1078.58, 506.67294, 1095.52, 475.21292, 1090.6799, 415.92288, 1068.9, 365.10287, 1070.11, 328.8029, 1096.73, 303.39285, 1143.92, 298.55283, 1197.16, 313.07285, 1245.56, 348.16287, 1275.81)
+
+[node name="Front Tentacle C" type="Polygon2D" parent="Visuals/Body/Front Collar/Front Sleeve/Front Tentacle A"]
+position = Vector2(62.999847, -37.799805)
+offset = Vector2(-555.3527, -1258.0597)
+texture = ExtResource("2_rqdlr")
+polygon = PackedVector2Array(618.8997, 1259.9805, 636.6153, 1173.1738, 725.19336, 1123.5702, 737.5943, 1063.3372, 765.9393, 1024.3628, 732.2796, 1006.64716, 716.3356, 1011.96185, 718.1071, 987.16, 666.7319, 997.7893, 666.7319, 1070.4233, 650.7878, 1098.7683, 599.41254, 1116.4839, 571.06757, 1155.4583, 572.8391, 1215.6914, 572.8391, 1263.5234)
+uv = PackedVector2Array(618.8997, 1259.9805, 636.6153, 1173.1738, 725.19336, 1123.5702, 737.5943, 1063.3372, 765.9393, 1024.3628, 732.2796, 1006.64716, 716.3356, 1011.96185, 718.1071, 987.16, 666.7319, 997.7893, 666.7319, 1070.4233, 650.7878, 1098.7683, 599.41254, 1116.4839, 571.06757, 1155.4583, 572.8391, 1215.6914, 572.8391, 1263.5234)
+
+[node name="Back Collar" type="Polygon2D" parent="Visuals/Body/Front Collar"]
+show_behind_parent = true
+position = Vector2(-329, -131)
+texture = ExtResource("2_rqdlr")
+polygon = PackedVector2Array(659.1427, 907.0084, 861.714, 909.8616, 893.09827, 955.5114, 941.6013, 952.6583, 967.2793, 847.09296, 907.3639, 790.03064, 778.97363, 772.9119, 653.4364, 804.2962, 613.4928, 872.771)
+uv = PackedVector2Array(659.1427, 907.0084, 861.714, 909.8616, 893.09827, 955.5114, 941.6013, 952.6583, 967.2793, 847.09296, 907.3639, 790.03064, 778.97363, 772.9119, 653.4364, 804.2962, 613.4928, 872.771)
+
+[node name="Neck" type="Polygon2D" parent="Visuals/Body/Front Collar/Back Collar"]
+position = Vector2(778.098, 937.098)
+offset = Vector2(-805.1985, -1263.3978)
+texture = ExtResource("2_rqdlr")
+polygon = PackedVector2Array(797.74384, 1214.8583, 828.8687, 1282.2957, 875.5561, 1295.2643, 987.087, 1201.8895, 984.49335, 1124.0771, 968.93085, 1090.3586, 976.7121, 1043.6711, 953.36835, 1004.765, 883.33734, 1009.9525, 831.46246, 1043.6711, 831.46246, 1111.1085, 849.6186, 1160.3896, 823.6812, 1186.3271, 795.1501, 1188.9209)
+uv = PackedVector2Array(797.74384, 1214.8583, 828.8687, 1282.2957, 875.5561, 1295.2643, 986.17786, 1203.7078, 984.49335, 1124.0771, 968.93085, 1090.3586, 976.7121, 1043.6711, 953.36835, 1018.40137, 886.9737, 1017.2252, 843.28064, 1047.3075, 841.46246, 1109.2903, 849.6186, 1160.3896, 823.6812, 1186.3271, 803.3319, 1194.3755)
+
+[node name="Necklace" type="Polygon2D" parent="Visuals/Body/Front Collar/Back Collar/Neck"]
+position = Vector2(2.781067, 3.5194092)
+offset = Vector2(-241.79846, -893.0979)
+texture = ExtResource("2_rqdlr")
+polygon = PackedVector2Array(230, 898.538, 267, 911.538, 293, 943.538, 293, 997.538, 339, 1027.5381, 389, 1032.5381, 411, 1001.538, 416, 962.538, 412, 931.538, 368, 903.538, 360, 871.538, 338, 882.538, 336, 895.538, 314, 890.538, 304, 900.538, 267, 872.538, 233, 868.538, 221, 877.538)
+uv = PackedVector2Array(230, 898.538, 267, 911.538, 293, 943.538, 293, 997.538, 339, 1027.5381, 389, 1032.5381, 411, 1001.538, 416, 962.538, 412, 931.538, 368, 903.538, 360, 871.538, 338, 882.538, 336, 895.538, 314, 890.538, 304, 900.538, 267, 872.538, 233, 868.538, 221, 877.538)
+
+[node name="Brain" type="Polygon2D" parent="Visuals/Body/Front Collar/Back Collar/Neck"]
+position = Vector2(69.299866, -195.29962)
+offset = Vector2(-491.39923, -497.69922)
+texture = ExtResource("2_rqdlr")
+polygon = PackedVector2Array(460.98114, 526.4892, 504.4649, 508.77356, 584.9904, 503.94202, 646.1898, 497.5, 702.55774, 473.34232, 744.431, 425.027, 739.5995, 352.55405, 741.20996, 307.45975, 708.99976, 276.86005, 618.81116, 239.8183, 584.9904, 246.26035, 539.8961, 236.59727, 473.86523, 255.9234, 427.1604, 283.30206, 382.0661, 320.3438, 359.51898, 347.7225, 356.2979, 397.64832, 362.74, 447.57416, 382.0661, 468.5108, 398.1712, 487.8369, 409.44476, 515.2156)
+uv = PackedVector2Array(460.98114, 526.4892, 504.4649, 508.77356, 584.9904, 503.94202, 646.1898, 497.5, 702.55774, 473.34232, 744.431, 425.027, 739.5995, 352.55405, 741.20996, 307.45975, 708.99976, 276.86005, 618.81116, 239.8183, 584.9904, 246.26035, 539.8961, 236.59727, 473.86523, 255.9234, 427.1604, 283.30206, 382.0661, 320.3438, 359.51898, 347.7225, 356.2979, 397.64832, 362.74, 447.57416, 382.0661, 468.5108, 398.1712, 487.8369, 409.44476, 515.2156)
+
+[node name="Front Stalk" type="Polygon2D" parent="Visuals/Body/Front Collar/Back Collar/Neck/Brain"]
+position = Vector2(25.199905, -69.30005)
+offset = Vector2(-164.4165, -508.67322)
+texture = ExtResource("2_rqdlr")
+polygon = PackedVector2Array(160.03653, 525.4259, 218.11655, 523.0059, 305.2366, 472.18585, 323.38657, 417.73584, 322.1766, 360.86584, 307.6566, 326.98584, 348.7966, 312.46582, 376.62662, 283.4258, 365.7366, 236.23578, 330.64658, 220.50577, 296.76657, 230.18578, 273.77658, 258.0158, 265.30655, 283.4258, 247.15659, 326.98584, 259.25656, 371.75586, 268.93655, 408.05585, 249.57657, 441.93585, 227.79654, 462.50586, 190.28653, 474.6059, 150.3565, 481.8659, 145.51651, 512.1159)
+uv = PackedVector2Array(160.03653, 525.4259, 218.11655, 523.0059, 305.2366, 472.18585, 323.38657, 417.73584, 322.1766, 360.86584, 307.6566, 326.98584, 348.7966, 312.46582, 376.62662, 283.4258, 365.7366, 236.23578, 330.64658, 220.50577, 296.76657, 230.18578, 273.77658, 258.0158, 265.30655, 283.4258, 247.15659, 326.98584, 259.25656, 371.75586, 268.93655, 408.05585, 249.57657, 441.93585, 227.79654, 462.50586, 190.28653, 474.6059, 150.3565, 481.8659, 145.51651, 512.1159)
+
+[node name="Front Eye" type="Polygon2D" parent="Visuals/Body/Front Collar/Back Collar/Neck/Brain/Front Stalk"]
+position = Vector2(182.69984, -239.39948)
+offset = Vector2(-377.99945, -170.09973)
+texture = ExtResource("2_rqdlr")
+polygon = PackedVector2Array(355, 187, 368, 201, 392, 193, 397, 166, 382, 144, 364, 146, 355, 161)
+uv = PackedVector2Array(355, 187, 368, 201, 392, 193, 397, 166, 382, 144, 364, 146, 355, 161)
+
+[node name="Back Stalk" type="Polygon2D" parent="Visuals/Body/Front Collar/Back Collar/Neck/Brain"]
+show_behind_parent = true
+position = Vector2(182.69977, -75.59985)
+offset = Vector2(-806.9164, -432.3734)
+texture = ExtResource("2_rqdlr")
+polygon = PackedVector2Array(781.4246, 427.67093, 796.42975, 459.82477, 875.7425, 436.24527, 912.18353, 401.94785, 931.4759, 361.21967, 931.4759, 333.353, 922.9014, 277.61966, 933.61945, 245.46582, 982.92194, 234.7479, 1006.5014, 179.01457, 972.20404, 142.57355, 925.0451, 142.57355, 903.6092, 166.15303, 892.8912, 200.45045, 858.5938, 228.31711, 854.3066, 288.33762, 871.4554, 339.78375, 858.5938, 371.9376, 809.2912, 401.94785)
+uv = PackedVector2Array(781.4246, 427.67093, 796.42975, 459.82477, 875.7425, 436.24527, 912.18353, 401.94785, 931.4759, 361.21967, 931.4759, 333.353, 922.9014, 277.61966, 933.61945, 245.46582, 982.92194, 234.7479, 1006.5014, 179.01457, 972.20404, 142.57355, 925.0451, 142.57355, 903.6092, 166.15303, 892.8912, 200.45045, 858.5938, 228.31711, 854.3066, 288.33762, 871.4554, 339.78375, 858.5938, 371.9376, 809.2912, 401.94785)
+
+[node name="Back Eye" type="Polygon2D" parent="Visuals/Body/Front Collar/Back Collar/Neck/Brain/Back Stalk"]
+position = Vector2(157.49988, -245.69968)
+offset = Vector2(-1007.9986, -113.3999)
+texture = ExtResource("2_rqdlr")
+polygon = PackedVector2Array(994.9592, 108.85026, 994.9592, 132.45554, 1004.7092, 141.1792, 1017.025, 141.1792, 1024.7224, 130.91605, 1026.775, 115.008156, 1023.69604, 100.63973, 1014.4592, 91.402885, 1003.16974, 92.42919, 995.47235, 103.71868)
+uv = PackedVector2Array(994.9592, 108.85026, 994.9592, 132.45554, 1004.7092, 141.1792, 1017.025, 141.1792, 1024.7224, 130.91605, 1026.775, 115.008156, 1023.69604, 100.63973, 1014.4592, 91.402885, 1003.16974, 92.42919, 995.47235, 103.71868)
+
+[node name="Mandible Mid" type="Polygon2D" parent="Visuals/Body/Front Collar/Back Collar/Neck/Brain"]
+position = Vector2(100.799866, -37.80005)
+offset = Vector2(-648.0165, -637.1732)
+texture = ExtResource("2_rqdlr")
+polygon = PackedVector2Array(615.449, 653.178, 640.74896, 691.678, 690.24896, 689.47797, 747.449, 681.77795, 759.54895, 641.078, 754.04895, 584.97797, 722.149, 595.97797, 700.149, 588.27795, 682.54895, 621.27795, 639.649, 614.678)
+uv = PackedVector2Array(615.449, 653.178, 640.74896, 691.678, 690.24896, 689.47797, 747.449, 681.77795, 759.54895, 641.078, 754.04895, 584.97797, 722.149, 595.97797, 700.149, 588.27795, 682.54895, 621.27795, 639.649, 614.678)
+
+[node name="Mandible Front" type="Polygon2D" parent="Visuals/Body/Front Collar/Back Collar/Neck/Brain/Mandible Mid"]
+position = Vector2(-33.07407, -20.4974)
+offset = Vector2(-515.5165, -598.2731)
+texture = ExtResource("2_rqdlr")
+polygon = PackedVector2Array(513.7805, 560.25525, 498.19067, 603.127, 505.9856, 632.3578, 550.80615, 638.204, 624.8574, 601.17834, 636.54956, 566.1014, 632.65234, 542.7168, 607.31885, 536.8706, 562.4983, 558.3065, 541.0625, 546.6142)
+uv = PackedVector2Array(513.7805, 560.25525, 498.19067, 603.127, 505.9856, 632.3578, 550.80615, 638.204, 624.8574, 601.17834, 636.54956, 566.1014, 632.65234, 542.7168, 607.31885, 536.8706, 562.4983, 558.3065, 541.0625, 546.6142)
+
+[node name="Mandible Back" type="Polygon2D" parent="Visuals/Body/Front Collar/Back Collar/Neck/Brain/Mandible Mid"]
+show_behind_parent = true
+position = Vector2(105.52578, -7.897425)
+offset = Vector2(-814.11633, -599.87305)
+texture = ExtResource("2_rqdlr")
+polygon = PackedVector2Array(790.2372, 587.52765, 802.36633, 574.46545, 791.6367, 546.0085, 802.36633, 529.6807, 827.09125, 532.0133, 858.8137, 553.0061, 870.47644, 591.7262, 856.0147, 615.0516, 838.2875, 622.5157, 812.6295, 622.5157, 790.2372, 611.786)
+uv = PackedVector2Array(790.2372, 587.52765, 802.36633, 574.46545, 791.6367, 546.0085, 802.36633, 529.6807, 827.09125, 532.0133, 858.8137, 553.0061, 870.47644, 591.7262, 856.0147, 615.0516, 838.2875, 622.5157, 812.6295, 622.5157, 790.7037, 607.1209)
+
+[node name="Back Sleeve" type="Polygon2D" parent="Visuals/Body"]
+show_behind_parent = true
+position = Vector2(1014.2985, 1524.5974)
+offset = Vector2(-189.29852, -2858.5974)
+texture = ExtResource("2_rqdlr")
+polygon = PackedVector2Array(126.64551, 2839.4453, 155.17676, 2745.2925, 246.47644, 2699.6426, 317.80444, 2722.4675, 340.6294, 2822.3267, 386.2793, 2762.4111, 454.75403, 2711.0552, 546.05383, 2699.6426, 534.64136, 2759.558, 488.99146, 2776.6768, 480.43213, 2885.0952, 480.43213, 3067.6948, 497.3777, 3147.2078, 512.2537, 3219.935, 513.0802, 3248.0342, 497.3777, 3257.9517, 458.5347, 3240.5962, 425.47684, 3205.8855, 408.9479, 3174.4805, 332.91486, 3136.464, 194.07184, 3090.183, 146.13797, 3026.5466, 127.95614, 2958.778, 123.68982, 2877.5818)
+uv = PackedVector2Array(126.64551, 2839.4453, 155.17676, 2745.2925, 246.47644, 2699.6426, 317.80444, 2722.4675, 340.6294, 2822.3267, 386.2793, 2762.4111, 454.75403, 2711.0552, 546.05383, 2699.6426, 534.64136, 2759.558, 488.99146, 2776.6768, 480.43213, 2885.0952, 480.43213, 3067.6948, 497.3777, 3147.2078, 512.2537, 3219.935, 513.0802, 3248.0342, 497.3777, 3257.9517, 458.5347, 3240.5962, 425.47684, 3205.8855, 408.9479, 3174.4805, 332.91486, 3136.464, 194.07184, 3090.183, 146.13797, 3026.5466, 127.95614, 2958.778, 123.68982, 2877.5818)
+
+[node name="Back Sleeve Back" type="Polygon2D" parent="Visuals/Body/Back Sleeve"]
+show_behind_parent = true
+position = Vector2(-863.09875, -2872.7952)
+texture = ExtResource("2_rqdlr")
+polygon = PackedVector2Array(986.16504, 2942.4407, 1066.6906, 2812.1357, 1176.4982, 2724.2898, 1216.0288, 2724.2898, 1262.88, 2778.4614, 1252.6313, 2996.6125, 1218.957, 3195.73, 1194.0673, 3258.6865, 1161.857, 3261.6145, 1094.5085, 3163.52, 1049.1215, 3116.6687, 990.5574, 3049.32)
+uv = PackedVector2Array(986.16504, 2942.4407, 1066.6906, 2812.1357, 1176.4982, 2724.2898, 1216.0288, 2724.2898, 1262.88, 2778.4614, 1252.6313, 2996.6125, 1218.957, 3195.73, 1194.0673, 3258.6865, 1161.857, 3261.6145, 1094.5085, 3163.52, 1049.1215, 3116.6687, 990.5574, 3049.32)
+
+[node name="Back Tentacle B" type="Polygon2D" parent="Visuals/Body/Back Sleeve"]
+show_behind_parent = true
+position = Vector2(214.19958, 12.600098)
+offset = Vector2(-541.79913, -2784.5957)
+texture = ExtResource("2_rqdlr")
+polygon = PackedVector2Array(573.2736, 2825.2036, 609.2737, 2804.2036, 623.2737, 2763.2036, 654.2737, 2783.2036, 714.2737, 2799.2036, 784.2737, 2775.2036, 825.2737, 2788.2036, 873.2737, 2816.2036, 921.27374, 2799.2036, 926.27374, 2759.2036, 896.2737, 2725.2036, 860.2737, 2731.2036, 782.2737, 2694.2036, 709.2737, 2705.2036, 675.2737, 2707.2036, 640.2737, 2690.2036, 584.2736, 2700.2036, 565.2736, 2732.2036, 550.2736, 2759.2036, 527.2736, 2783.2036, 521.2736, 2814.2036)
+uv = PackedVector2Array(573.2736, 2825.2036, 609.2737, 2804.2036, 623.2737, 2763.2036, 654.2737, 2783.2036, 714.2737, 2799.2036, 784.2737, 2775.2036, 825.2737, 2788.2036, 873.2737, 2816.2036, 921.27374, 2799.2036, 926.27374, 2759.2036, 896.2737, 2725.2036, 860.2737, 2731.2036, 782.2737, 2694.2036, 709.2737, 2705.2036, 675.2737, 2707.2036, 640.2737, 2690.2036, 584.2736, 2700.2036, 565.2736, 2732.2036, 550.2736, 2759.2036, 527.2736, 2783.2036, 521.2736, 2814.2036)
+
+[node name="Back Tentacle A" type="Polygon2D" parent="Visuals/Body/Back Sleeve/Back Tentacle B"]
+position = Vector2(46.562103, -83.9806)
+offset = Vector2(-563.59906, -3017.9958)
+texture = ExtResource("2_rqdlr")
+polygon = PackedVector2Array(557.508, 3047.177, 617.508, 3036.177, 655.508, 2994.177, 705.508, 2983.177, 799.508, 2979.177, 854.508, 2934.177, 865.508, 2916.177, 844.508, 2898.177, 836.508, 2875.177, 808.508, 2880.177, 786.508, 2909.177, 739.508, 2927.177, 670.508, 2927.177, 631.508, 2927.177, 591.508, 2966.177, 547.508, 2999.177, 535.508, 3025.177)
+uv = PackedVector2Array(557.508, 3047.177, 617.508, 3036.177, 655.508, 2994.177, 705.508, 2983.177, 799.508, 2979.177, 854.508, 2934.177, 865.508, 2916.177, 844.508, 2898.177, 836.508, 2875.177, 808.508, 2880.177, 786.508, 2909.177, 739.508, 2927.177, 670.508, 2927.177, 631.508, 2927.177, 591.508, 2966.177, 547.508, 2999.177, 535.508, 3025.177)
+
+[node name="Back Tentacle C" type="Polygon2D" parent="Visuals/Body/Back Sleeve/Back Tentacle B"]
+position = Vector2(21.362213, -27.281132)
+offset = Vector2(-586.3992, -3124.6953)
+texture = ExtResource("2_rqdlr")
+polygon = PackedVector2Array(556.13696, 3151.064, 600.13696, 3082.064, 650.13696, 3079.064, 695.13696, 3112.064, 718.13696, 3148.064, 758.13696, 3154.064, 827.13696, 3134.064, 881.13696, 3154.064, 899.13696, 3176.064, 891.13696, 3203.064, 892.13696, 3226.064, 884.13696, 3244.064, 835.13696, 3219.064, 775.13696, 3229.064, 714.13696, 3229.064, 659.13696, 3193.064, 641.13696, 3155.064, 629.13696, 3152.064, 608.13696, 3182.064, 574.13696, 3191.064, 555.13696, 3183.064, 546.13696, 3164.064)
+uv = PackedVector2Array(556.13696, 3151.064, 600.13696, 3082.064, 650.13696, 3079.064, 695.13696, 3112.064, 718.13696, 3148.064, 758.13696, 3154.064, 827.13696, 3134.064, 881.13696, 3154.064, 899.13696, 3176.064, 891.13696, 3203.064, 892.13696, 3226.064, 884.13696, 3244.064, 835.13696, 3219.064, 775.13696, 3229.064, 714.13696, 3229.064, 659.13696, 3193.064, 641.13696, 3155.064, 629.13696, 3152.064, 608.13696, 3182.064, 574.13696, 3191.064, 555.13696, 3183.064, 546.13696, 3164.064)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_pxeq6")
+}
+autoplay = "idle_loop"

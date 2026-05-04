@@ -1,0 +1,54 @@
+[gd_scene load_steps=3 format=3 uid="uid://jvm6agse2ls2"]
+
+[ext_resource type="Texture2D" uid="uid://bftoobrcvum04" path="res://Mnemonist/scenes/rest/menmonist_sitting.png" id="1_wo0m6"]
+[ext_resource type="PackedScene" uid="uid://bgy88bk44xxvk" path="res://Mnemonist/scenes/rest/selection_reticle.tscn" id="3_evojs"]
+
+[node name="MnemonistRest" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -207.00002
+offset_top = -333.0
+offset_right = 42.999985
+offset_bottom = -133.0
+scale = Vector2(1.6675045, 2.1127877)
+texture = ExtResource("1_wo0m6")
+
+[node name="ControlRoot" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 17.105127
+offset_top = 24.999802
+offset_right = 17.105127
+offset_bottom = 24.999802
+
+[node name="SelectionReticle" parent="ControlRoot" instance=ExtResource("3_evojs")]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = -181.5775
+offset_top = -335.52365
+offset_right = 146.05147
+offset_bottom = 30.262909
+
+[node name="Hitbox" type="Control" parent="ControlRoot"]
+unique_name_in_owner = true
+anchors_preset = 0
+offset_left = -189.4722
+offset_top = -365.78653
+offset_right = 159.20926
+offset_bottom = 34.210327
+
+[node name="ThoughtBubbleRight" type="Control" parent="ControlRoot"]
+unique_name_in_owner = true
+anchors_preset = 0
+offset_left = 168.42
+offset_top = -410.523
+offset_right = 168.42
+offset_bottom = -410.523
+
+[node name="ThoughtBubbleLeft" type="Control" parent="ControlRoot"]
+unique_name_in_owner = true
+anchors_preset = 0
+offset_left = -169.736
+offset_top = -392.102
+offset_right = -169.736
+offset_bottom = -392.102

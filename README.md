@@ -6,8 +6,8 @@ Play as the Mnemonist: an amnesiac psychic who uses his few remaining memories a
 
 79 draftable cards. 9 relics. 3 potions.
 
-Thanks to the Megacrit team for the game, and Alchyr for Baselib and the Mod Template.
+Thanks to the Megacrit team for the game, and Alchyr for Baselib and the Mod Template and Goblin for the character Sprite art.
 
 Fast Mode is highly recommended. Multiplayer is untested.
 
-Requires BaseLib 0.3.0.
+Requires BaseLib 3.1.0.

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dlhhirvcril8s"
-path="res://.godot/imported/Mnemonist_Sprite.png-8cf76324050c3c206bf09001af5971f8.ctex"
+path="res://.godot/imported/Mnemonist_Sprite.png-c7ee45d351f6d76a7f5ced1fc32b61b8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Mnemonist/scenes/combat/creature_visuals/Mnemonist_Sprite.png"
-dest_files=["res://.godot/imported/Mnemonist_Sprite.png-8cf76324050c3c206bf09001af5971f8.ctex"]
+source_file="res://Mnemonist/scenes/combat/creature_visuals/beta/Mnemonist_Sprite.png"
+dest_files=["res://.godot/imported/Mnemonist_Sprite.png-c7ee45d351f6d76a7f5ced1fc32b61b8.ctex"]
 
 [params]
 
