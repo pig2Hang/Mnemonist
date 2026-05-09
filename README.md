@@ -10,4 +10,4 @@ Thanks to the Megacrit team for the game, and Alchyr for Baselib and the Mod Tem
 
 Fast Mode is highly recommended. Multiplayer is untested.
 
-Requires BaseLib 3.1.0.
+Requires BaseLib 3.1.2.

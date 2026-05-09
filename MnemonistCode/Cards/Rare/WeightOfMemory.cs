@@ -1,6 +1,7 @@
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Commands.Builders;
 using MegaCrit.Sts2.Core.Entities.Cards;
+using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
@@ -59,7 +60,7 @@ public class WeightOfMemory() : MnemonistCard(1, CardType.Attack, CardRarity.Rar
         bool shouldTriggerFatal = cardPlay.Target.Powers.All(p => p.ShouldOwnerDeathTriggerFatal());
         AttackCommand attackCommand = await DamageCmd.Attack(DynamicVars.CalculatedDamage).FromCard(this).Targeting(cardPlay.Target).WithHitFx("vfx/vfx_big_slash", tmpSfx: "blunt_attack.mp3").Execute(choiceContext);
         await PowerCmd.Apply<Memory>(choiceContext,this.Owner.Creature, DynamicVars["Memory"].IntValue, this.Owner.Creature, (CardModel) this, false);
-        if (!shouldTriggerFatal || !attackCommand.Results.Any( (r => r.WasTargetKilled)))
+        if (!shouldTriggerFatal || !attackCommand.Results.SelectMany( r => r).Any((Func<DamageResult, bool>) (r => r.WasTargetKilled)))
             return;
         int intValue = DynamicVars["Increase"].IntValue;
         BuffFromPlay(intValue);
