@@ -1,0 +1,8 @@
+{
+  "MNEMONIST-HISTORIANS_TINCTURE.description": "将一张随机攻击牌、随机技能牌、随机能力牌从[gold]消耗牌堆[/gold]中置入你的[gold]手牌[/gold]。它们本回合耗能为{energyPrefix:energyIcons(1)}。",
+  "MNEMONIST-HISTORIANS_TINCTURE.title": "史学家的酊剂",
+  "MNEMONIST-MEMORY_IN_A_BOTTLE.description": "获得{Memory:diff()}层[blue]记忆[/blue]。",
+  "MNEMONIST-MEMORY_IN_A_BOTTLE.title": "瓶中回忆",
+  "MNEMONIST-SLEEVED_JOKER.description": "将全部四张[gold]已升级的[/gold][gold]情绪[/gold]放入你的[gold]手牌[/gold]。",
+  "MNEMONIST-SLEEVED_JOKER.title": "袖珍鬼牌"
+}

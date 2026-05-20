@@ -1,0 +1,16 @@
+{
+  "MNEMONIST-MNEMONIST.titleObject": "铭忆师",
+  "MNEMONIST-MNEMONIST.description": "一个正在寻找目标的迷失通灵者。\n他将仅存的记忆化作剑与盾",
+  "MNEMONIST-MNEMONIST.pronounObject": "他",
+  "MNEMONIST-MNEMONIST.banter.dead.endTurnPing": "......",
+  "MNEMONIST-MNEMONIST.banter.alive.endTurnPing": "我不曾记得你如此磨蹭...",
+  "MNEMONIST-MNEMONIST.possessiveAdjective": "他的",
+  "MNEMONIST-MNEMONIST.pronounSubject": "他",
+  "MNEMONIST-MNEMONIST.pronounPossessive": "他的",
+  "MNEMONIST-MNEMONIST.cardsModifierTitle": "__ 卡牌",
+  "MNEMONIST-MNEMONIST.eventDeathPrevention": "Co-op survival line",
+  "MNEMONIST-MNEMONIST.aromaPrinciple": "Lore",
+  "MNEMONIST-MNEMONIST.cardsModifierDescription": "__ 的卡牌现在会出现在奖励和商店中。",
+  "MNEMONIST-MNEMONIST.goldMonologue": "正在塑造的一段伟大回忆...",
+  "MNEMONIST-MNEMONIST.title": "铭忆师"
+}

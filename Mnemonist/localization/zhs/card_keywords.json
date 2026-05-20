@@ -1,0 +1,10 @@
+{
+  "MNEMONIST-CREATESHUMORS.description": "有正面效果的耗能为0的牌，拥有[gold]消耗[/gold]。\n四种情绪分别为 [gold]易怒[/gold]，[purple]忧郁[/purple]，[blue]冷静[/blue]和[red]开朗[/red]。",
+  "MNEMONIST-CREATESHUMORS.title": "情绪",
+  "MNEMONIST-PERSISTENT.title": "持续",
+  "MNEMONIST-PERSISTENT.description": "当本牌被[gold]消耗[/gold]时，将其放入你的[gold]抽牌堆[/gold]。",
+  "MNEMONIST-PSYCH.description": "将X张随机[gold]情绪[/gold]洗入你的[gold]抽牌堆[/gold]。",
+  "MNEMONIST-PSYCH.title": "心念X",
+  "MNEMONIST-PSYCHPLUS.description": "将X张已升级的随机[gold]情绪[/gold]洗入你的[gold]抽牌堆[/gold]。",
+  "MNEMONIST-PSYCHPLUS.title": "心念+X"
+}
