@@ -54,7 +54,7 @@
   "MNEMONIST-PERSONALITY_EXTRACTION_POWER.smartDescription": "每当一张[gold]情绪[/gold]被[gold]消耗[/gold]时，对所有敌人造成{Amount}点伤害。",
   "MNEMONIST-PERSONALITY_EXTRACTION_POWER.title": "人格提取",
   "MNEMONIST-PSYCHOTHERAPY_POWER.description": "每当你所有四种[gold]情绪[/gold]都各[gold]消耗[/gold]一次时，对所有敌人造成30点伤害。",
-  "MNEMONIST-PSYCHOTHERAPY_POWER.smartDescription": "每当你所有四种[gold]情绪[/gold]都各[gold]消耗[/gold]一次时，对所有敌人造成{Amount}点伤害。\n已消耗：\n{Choleric:cond:<=0?[gold]易怒[/gold]\n|}{Melancholic:cond:<=0?[purple]忧郁[/purple]\n|}{Phlegmatic:cond:<=0?[blue]冷静[/blue]\n|}{Sanguine:cond:<=0?[red]开朗[/red]\n|}",
+  "MNEMONIST-PSYCHOTHERAPY_POWER.smartDescription": "每当你所有四种[gold]情绪[/gold]都各[gold]消耗[/gold]一次时，对所有敌人造成{Amount}点伤害。\n还需消耗：\n{Choleric:cond:<=0?[gold]易怒[/gold]\n|}{Melancholic:cond:<=0?[purple]忧郁[/purple]\n|}{Phlegmatic:cond:<=0?[blue]冷静[/blue]\n|}{Sanguine:cond:<=0?[red]开朗[/red]\n|}",
   "MNEMONIST-PSYCHOTHERAPY_POWER.title": "心理疗法",
   "MNEMONIST-RECURSIVE_MEMORY_POWER.description": "每当你抽到一张[blue]印迹[/blue]，获得[blue]1[/blue]层[blue]记忆[/blue]。",
   "MNEMONIST-RECURSIVE_MEMORY_POWER.smartDescription": "每当你抽到一张[blue]印迹[/blue]，获得[blue]{Amount}[/blue]层[blue]记忆[/blue]。",
