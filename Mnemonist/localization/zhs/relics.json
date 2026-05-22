@@ -14,7 +14,7 @@
   "MNEMONIST-NEWTONS_CRADLE.description": "每当你[gold]抽牌堆[/gold]洗牌时，[gold]心念[/gold]{Humors}并抽一张牌。",
   "MNEMONIST-NEWTONS_CRADLE.flavor": "滴。答。滴。答。",
   "MNEMONIST-NEWTONS_CRADLE.title": "牛顿摆",
-  "MNEMONIST-SPIRE_DIARY.additionalRestSiteHealText": "Increase [gold]Spire Diary's[/gold] [blue]Memory[/blue] by [blue]{Increase:diff()}[/blue].",
+  "MNEMONIST-SPIRE_DIARY.additionalRestSiteHealText": "[gold]高塔日记[/gold]给予的[blue]记忆[/blue]层数额外提升[blue]{Increase:diff()}[/blue]层。",
   "MNEMONIST-SPIRE_DIARY.description": "在你第二回合开始时，获得[blue]{Memory:diff()}[/blue]层[blue]记忆[/blue]。\n每当你休息时，永久提升[blue]{Increase:diff()}[/blue]点可获得的[blue]记忆[/blue]层数。",
   "MNEMONIST-SPIRE_DIARY.flavor": "大脑做不到的，纸笔有成效。",
   "MNEMONIST-SPIRE_DIARY.title": "高塔日记",
